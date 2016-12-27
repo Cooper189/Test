@@ -25,10 +25,8 @@ app.directive('testSkyWell', ['mainFactory', function (mainFactory) {
 				for (var i = 0; i < this.size; i++) {
 					if((i % 2) == 0) {
 						a.push(self.concat[0]);
-						console.log(0)
 					}else {
 						a.push(self.concat[1]);
-						console.log(1)
 					}					
 				}
 				self.arr = self.arr.concat(a);
