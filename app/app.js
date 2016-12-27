@@ -36,7 +36,7 @@ app.directive('testSkyWell', ['mainFactory', function (mainFactory) {
 		    var bod = angular.element(document.body);
 		    var win = angular.element(window);
 		    win.bind("scroll", function() {
-		       	if (scope.main.check && (bod[0].scrollTop + win[0].innerHeight >= bod[0].scrollHeight)) {
+		       	if (scope.main.check && (win[0].pageYOffset + win[0].innerHeight >= bod[0].scrollHeight)) {
 		            scope.$apply(scope.main.start());
 		            }
 		        });
