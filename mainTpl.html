@@ -1,0 +1,15 @@
+<div class="container main">
+	<div class="col-md-offset-2 col-md-8 header_block">
+		<div class="col-md-4">
+    		<input type="checkbox" ng-model="main.check">
+ 	 		<label>Scroll: <span>{{(main.check) ? 'ON' : 'OFF'}}</span></label>
+ 	 	</div>
+ 	 	<div class="col-md-8">
+ 	 		<input type="" ng-model="main.size">
+ 	 		<label>Add elements: <span>{{main.size}}</span></label>
+ 	 	</div>
+ 	 </div>
+	<div ng-repeat="picture in main.arr track by $index" class="col-md-4 main_block">
+		<img ng-src="{{picture}}" alt="test" ng-click="main.del($index)">
+	</div>
+</div>

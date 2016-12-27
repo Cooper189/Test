@@ -1,0 +1,29 @@
+$wrapperColor: #E9E9E9;
+$colorRed: #FF6347;
+
+@mixin margin($top, $right, $bottom, $left) {
+	@if $top != 0 {margin-top: $top;}
+	@if $right != 0 {margin-right: $right;}
+	@if $bottom != 0 {margin-bottom: $bottom;}
+	@if $left != 0 {margin-left: $left;}
+}
+
+.main {
+	.header_block {
+		@include margin(10px, 0, 25px, 0);
+		background-color: $wrapperColor; 
+	}
+	.main_block{
+		text-align: center;
+		margin: 10px 0;
+		img{
+			cursor: pointer;
+		}
+	}
+	label {
+		font-size: 22px;
+		span {
+			color:$colorRed;
+		}
+	}
+}
